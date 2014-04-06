@@ -3,7 +3,7 @@ AuthWordpress
 
 Wordpress Authentification module for MediaWiki
 
-== Installation ==
+==Installation==
 
 Just drop this file in extensions and add these few lines in your LocalSettings.php
 

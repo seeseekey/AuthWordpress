@@ -352,21 +352,6 @@ class AuthWordpress extends AuthPlugin {
 		} else {
 			return $username;
 		}
-
-/*
-		$dbr =& $this->getAuthWordpressDB();
-		
-		$sql = "SELECT user_login FROM " . $this->getAuthWordpressUserTableName() . 
-				       " WHERE lower(user_login)=lower(".
-				         $dbr->addQuotes($username) . ")";
-		$res = $this->query($sql,
-				       "AuthWordpress::getCanonicalName" );
-		if($res) {
-			return $res->user_login;
-		} else {
-			return $username;
-		}
-*/
 	}
 }
 ?>
