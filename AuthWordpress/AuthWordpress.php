@@ -75,11 +75,14 @@ class AuthWordpress extends AuthPlugin {
 	}
 
 	function getAuthWordpressDB () {
-		Return $this->getAuthWordpressDB =
-			new DatabaseMysql($this->_AuthWordpressDBServer,
-						$this->_AuthWordpressUser,
-						$this->_AuthWordpressPassword, 
-						$this->_AuthWordpressDBName	); 
+		$params = array(
+		    "host" => $this->_AuthWordpressDBServer,
+		    "user" => $this->_AuthWordpressUser,
+			"password" => $this->_AuthWordpressPassword,
+			"dbname" => $this->_AuthWordpressDBName,
+		);
+		
+		Return $this->getAuthWordpressDB = new DatabaseMysql($params); 
 	}
 
 	/* Interface documentation copied in from AuthPlugin */
